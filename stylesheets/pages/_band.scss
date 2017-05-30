@@ -1,0 +1,44 @@
+.band {
+    background-color: map-get($colors, black3);
+    .navBar {
+        &__menu {
+            ul {
+                li {
+                    .band-link {
+                        &:after {
+                            @include transform(scale(1));
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .jumbotron {
+        @include padding(2em, 2em, 2em, 2em);
+        color: map-get($colors, white);
+        background-color: map-get($colors, black2);
+        .container {
+            &--band {
+                @include padding(2em, null, null, null);
+                @include margin(10px, null, 2em, null);
+            }
+        }
+    }
+    &__title {
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            display: none;
+        }
+    }
+    &__info {
+        @include padding(null, null, 2em, null);
+        color: map-get($colors, white);
+        h1 {
+            @include margin(null, null, 1.4em, null);
+        }
+        p {
+            line-height: 1.8;
+            font-size: 1.3em;
+        }
+    }
+}

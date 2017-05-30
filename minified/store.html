@@ -16,11 +16,9 @@
     <meta property="og:image" content="./images/band.png" />
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Oswald:400,700" rel="stylesheet">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.min.css">
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -39,7 +37,7 @@
     </script>
 </head>
 
-<body class="home">
+<body class="store">
     <header>
         <nav class="navBar">
             <div class="container bounceInDown animated">
@@ -68,26 +66,35 @@
             </div>
         </nav>
     </header>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 jumbotron__box flipInX animated">
-                    <h2>"Dalle notti a scrivere a quelle cantando, ora sul palco prima soltanto sognando."</h2>
-                    <span class="float-right">S&G</span>
-                </div>
-            </div>
-        </div>
+    <div class="container text-center store__title">
+        <h2>Store</h2>
     </div>
-    <div class="esibition">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="esibition__title"> Shark & Groove</h1>
-                    <h1 class="esibition__title"> Italia's Got Talent 2015</h1>
-                </div>
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E0DsimNLMR4?showinfo=0" allowfullscreen></iframe>
+    <div class="container container--store">
+        <div class="row">
+            <div class="col-lg-6 text-center">
+                <h4>Album</h4>
+                <img src="./images/cdamazon.png" class="store__album" alt="image album uno">
+                <h5>Uno</h5>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 store__buy text-center">
+                        <h5>Acquistalo su</h5>
+                        <a href="https://www.amazon.it/UNO-Shark-Groove/dp/B01G83409E"><img src="./images/social/amazon.png" alt="icon amazon">
+                            <p>Amazon</p>
+                        </a>
+                        <a href="https://itunes.apple.com/it/album/uno/id1117414178"><img src="./images/social/itunes.png" alt="icon iTunes">
+                            <p>iTunes</p>
+                        </a>
+                    </div>
+                    <div class="col-6 store__buy text-center">
+                        <h5>Ascoltalo su</h5>
+                        <a href="https://soundcloud.com/user-435603363"><img src="./images/social/soundcloud.png" alt="icon soundCloud">
+                            <p>SoundCloud</p>
+                        </a>
+                        <a href="https://play.spotify.com/artist/0e7OanFmHNyBtHeJPjM7NL"><img src="./images/social/spotify.png" alt="icon spotify">
+                            <p>Spotify</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -134,7 +141,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/wow.min.js"></script>
-    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/app.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,57 @@
+    .home {
+        background-color: map-get($colors, black2);
+        .navBar {
+            &__menu {
+                ul {
+                    li {
+                        .home-link {
+                            &:after {
+                                @include transform(scale(1));
+                                opacity: 1;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .jumbotron {
+            @include background('../images/concert-min.png');
+            @include padding(12em, 2em, 12em, 2em);
+            @include margin(null, null, 0, null);
+            color: map-get($colors, white);
+            z-index: 0;
+            @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+                @include padding(0, 0, 0, 0);
+            }
+            &__box {
+                @include padding(2em, 2em, 2em, 2em);
+                background-color: rgba(0, 0, 0, .8);
+                font-family: 'Dancing Script';
+                border-radius: 5px;
+                h2 {
+                    font-family: 'Dancing Script', cursive;
+                }
+                @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+                    @include margin(1em, 1em, 1em, 1em);
+                }
+            }
+        }
+        .esibition {
+            @include padding(4em, 4em, 4em, 4em);
+            color: map-get($colors, white);
+            text-align: center;
+            @media screen and (max-width: map-get($grid-breakpoints, md)) {
+                @include padding(1em, 1em, 1em, 1em);
+            }
+            &__title {
+                font-size: 2em;
+                @media screen and (max-width: map-get($grid-breakpoints, md)) {
+                    font-size: 1.4em;
+                }
+                &:last-child {
+                    @include margin(null, null, 2em, null);
+                }
+            }
+        }
+    }

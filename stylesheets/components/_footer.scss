@@ -1,0 +1,60 @@
+.footer {
+    @include padding(2em, 0, .3em, 0);
+    color: map-get($colors, white);
+    background-color: map-get($colors, black);
+    &__social {
+        @include margin(null, null, 2em, null);
+        a {
+            @include margin(null, 1em, null, 1em);
+            position: relative;
+            display: inline-block;
+            font-family: "icomoon";
+            font-size: 1.2em;
+            border-radius: 50%;
+            text-align: center;
+            color: map-get($colors, white);
+            &:before,
+            &:after {
+                @include position(absolute, 0, 0, 0, 0);
+                @include transition(.5s all);
+                content: "";
+                display: block;
+                border-radius: 50%;
+                background: transparent;
+            }
+            &:hover {
+                &:after {
+                    @include transform(scale(1.2));
+                }
+                &:before {
+                    @include transform(scale(1.8));
+                    @include transition(.5s all);
+                    opacity: 0;
+                    border: 3px solid;
+                }
+            }
+            img {
+            	@include size(2.2em, null);
+                display: inline-block;
+                @media screen and (max-width: map-get($grid-breakpoints, md)) {
+                    @include margin(null, null, 1em, null);
+                }
+            }
+        }
+    }
+    &__logo {
+        img {
+        	@include size(3em, null);
+        	@include margin(null, null, .6em, null);
+        }
+    }
+    &__author {
+        font-size: .7em;
+        p {
+            @include margin(null, null, 0, null);
+        }
+        a {
+            color: map-get($colors, gray);
+        }
+    }
+}

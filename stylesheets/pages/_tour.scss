@@ -1,0 +1,62 @@
+.tour {
+    background-color: map-get($colors, black3);
+     .navBar {
+            &__menu {
+                ul {
+                    li {
+                        .tour-link {
+                            &:after {
+                                @include transform(scale(1));
+                                opacity: 1;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    .container {
+        &--tour {
+            @include padding(2em, null, null, null);
+        }
+    }
+    .jumbotron {
+        @include padding(2em, 2em, 0, 2em);
+        @include margin(null, null, 0, null);
+        color: map-get($colors, white);
+        background-color: map-get($colors, black3);
+        &__box {
+            @include padding(0, 0, 0, 0);
+        }
+    }
+    &__title {
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            display: none;
+        }
+    }
+    &__info {
+        @include margin(null, null, 6em, null);
+        @media screen and (min-width: 2000px) {
+                @include margin(null, null, 20em, null);
+            }
+        color: map-get($colors, white);
+        &__box {
+            @include padding(2em, 1em, 0, 1em);
+            background-color: map-get($colors, black2);
+            &__row {
+                @include padding(1em, 1em, 1em, 1em);
+                border-bottom: 1px solid map-get($colors, white);
+            }
+            h2 {
+                @include margin(null, null, 1.4em, null);
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+            p {
+                line-height: 1.8;
+                font-size: 1.3em;
+            }
+        }
+    }
+}

@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Shark & Groove | Store</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="style.css">
-    <META NAME="author" CONTENT="Luca Spezzano">
-    <META NAME="description" CONTENT="Sito degli Shark & Groove">
-    <META NAME="copyright" CONTENT="sharkegroove.com">
-    <meta NAME="keywords" CONTENT="music musica band new rap cantanti cantante album nuovo shark e groove nuove scoperte musicali store calabresi calabria siderno mammola">
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylemenu.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="script.js"></script>
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <meta property="og:url" content="http://www.sharkandgroove.com" />
+    <title>Shark & Groove</title>
+    <meta name="description" content="Official web site Shark & Groove" />
+    <meta name="keywords" content="Band, musica, gruppo musicale, siderno, music, band calabresi, rap, cantanti, album, uno, Shark e Groove, calabria, reggio calabria, mammola, cantanti emergenti" />
+    <meta name="author" content="Luca Spezzano" />
+    <meta name="copyright" content="Shark e Groove" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="http://sharkandgroove.com" />
     <meta property="og:title" content="Shark & Groove" />
-    <meta property="og:description" content="Sito ufficiale degli Shark & Groove" />
-    <meta property="og:image" content="http://www.sharkandgroove.com/img/tour3.png" />
+    <meta property="og:description" content="Scopri di più sulla band e sulle date del nostro tour!" />
+    <meta property="og:image" content="./images/band.png" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Oswald:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css">
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -37,76 +37,111 @@
     </script>
 </head>
 
-<body>
+<body class="store">
     <header>
-        <div id="logo"><img src="img/logo.png" alt="logo"></div>
-        <div id='cssmenu'>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="band.html">Band</a></li>
-                <li><a href="tour.html">Tour</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li><a style="color: #00D0D0;" href="store.html">Store</a></li>
-                <li><a href="contatti.html">Contatti</a></li>
-            </ul>
-        </div>
+        <nav class="navBar">
+            <div class="container bounceInDown animated">
+                <div class="row navBar__logo">
+                    <div class="col-12 text-center">
+                        <img src="./images/logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="row navBar__menu">
+                    <div class="col-12 text-center">
+                        <ul>
+                            <li><a href="index.html" class="home-link pulse-color">Home</a></li>
+                            <li><a href="band.html" class="band-link">Band</a></li>
+                            <li><a href="tour.html" class="tour-link">Tour</a></li>
+                            <li><a href="video.html" class="video-link">Video</a></li>
+                            <li><a href="store.html" class="store-link">Store</a></li>
+                            <li><a href="contatti.html" class="contatti-link">Cantatti</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navBar__hamburger navBar__hamburger--arrow" onclick="App.hamburger(this)">
+                    <div class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div id="contstore">
-        <h3>Acquista il nostro cd</h3>
-        <a href="https://www.amazon.com/Uno-Shark-e-Groove/dp/B01G7SMPT2/ref=redir_mobile_desktop?_encoding=UTF8&dpid=51ed722yghl&dppl=1&keywords=shark%20e%20groove&pi=ac_sx236_sy340_ql65&qid=1482335556&ref=plsrch&ref_=mp_s_a_1_20&sr=8-20"><img src="./img/cdamazon.png">
-        <p>
-            Uno <br>
-            (Clicca qui per acquistare)
-        </p>
-        </a>
-        <h5>Ci trovi anche su</h5>
-        
-         <div class="social social-app">
-            <ul>
-                <li>
-                    <a href="https://play.spotify.com/artist/0e7OanFmHNyBtHeJPjM7NL?play=true&utm_source=open.spotify.com&utm_medium=open"><img class="icons" alt="" src="img/spotify.png"></a>
-                </li>
-                <li>
-                    <a href="https://itunes.apple.com/it/album/uno/id1117414178"><img class="icons" alt="twitter icon" src="img/itunes.png"></a>
-                </li>
-                <li>
-                    <a href="https://soundcloud.com/user-435603363"><img class="icons" alt="" src="img/soundcloud.png"></a>
-                </li>
-                <li>
-                    <a href="https://www.amazon.it/UNO-Shark-Groove/dp/B01G83409E"><img class="icons" alt="" src="img/amazon.png"></a>
-                </li>
-            </ul>
-        </div>
-          
-        
+    <div class="container text-center store__title">
+        <h2>Store</h2>
     </div>
-    <footer>
-        <div class="social">
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/Shark-Groove-268771239965122/?fref=ts"><img class="icons" alt="facebook icon" src="img/face.png"></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/SharkeGroove"><img class="icons" alt="twitter icon" src="img/twitter.png"></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/sharkegroove/"><img class="icons" alt="instagram icon" src="img/insta.png"></a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/channel/UCLDSuRWVFh72oU3vXnMqIvQ"><img class="icons" alt="youtube icon" src="img/youtube.png"></a>
-                </li>
-            </ul>
+    <div class="container container--store">
+        <div class="row">
+            <div class="col-lg-6 text-center">
+                <h4>Album</h4>
+                <img src="./images/cdamazon.png" class="store__album" alt="image album uno">
+                <h5>Uno</h5>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row">
+                    <div class="col-6 store__buy text-center">
+                        <h5>Acquistalo su</h5>
+                        <a href="https://www.amazon.it/UNO-Shark-Groove/dp/B01G83409E"><img src="./images/social/amazon.png" alt="icon amazon">
+                            <p>Amazon</p>
+                        </a>
+                        <a href="https://itunes.apple.com/it/album/uno/id1117414178"><img src="./images/social/itunes.png" alt="icon iTunes">
+                            <p>iTunes</p>
+                        </a>
+                    </div>
+                    <div class="col-6 store__buy text-center">
+                        <h5>Ascoltalo su</h5>
+                        <a href="https://soundcloud.com/user-435603363"><img src="./images/social/soundcloud.png" alt="icon soundCloud">
+                            <p>SoundCloud</p>
+                        </a>
+                        <a href="https://play.spotify.com/artist/0e7OanFmHNyBtHeJPjM7NL"><img src="./images/social/spotify.png" alt="icon spotify">
+                            <p>Spotify</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="final">
-            <p>"Dalle notti a scrivere a quelle cantando, ora sul palco prima soltanto sognando."</p>
-            <br />
-            <div id="logo2"> <img src="img/logo2.png" alt="logo2"></div>
-            <h1>© Shark & Groove</h1>
-            <div class="powered">
-                <p>Sito sviluppato da <a href="mailto:spezzanoluca@gmail.com">Luca Spezzano</a></p>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center footer__social">
+                    <a href="https://www.facebook.com/Shark-Groove-268771239965122/">
+                        <img src="./images/social/facebook.png" alt="icon facebook">
+                    </a>
+                    <a href="https://twitter.com/SharkeGroove">
+                        <img src="./images/social/twitter.png" alt="icon twitter">
+                    </a>
+                    <a href="https://www.instagram.com/sharkegroove/">
+                        <img src="./images/social/instagram.png" alt="icon instagram">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLDSuRWVFh72oU3vXnMqIvQ">
+                        <img src="./images/social/youtube.png" alt="icon youtube">
+                    </a>
+                    <a href="https://play.spotify.com/artist/0e7OanFmHNyBtHeJPjM7NL">
+                        <img src="./images/social/spotify.png" alt="icon spotify">
+                    </a>
+                    <a href="https://soundcloud.com/user-435603363">
+                        <img src="./images/social/soundcloud.png" alt="icon soundcloud">
+                    </a>
+                </div>
+                <div class="col-lg-12 text-center footer__logo">
+                    <img src="./images/logo2.png" alt="icon logo">
+                    <p>© Shark & Groove</p>
+                </div>
+                <div class="col-lg-12 text-center footer__author">
+                    <p>
+                        Web site designed and developed by
+                        <br>
+                        <a href="mailto:spezzanoluca@gmail.com"> Luca spezzano</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
 </body>
 
 </html>

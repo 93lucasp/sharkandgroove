@@ -1,0 +1,65 @@
+.store {
+    color: map-get($colors, white);
+    background-color: map-get($colors, black2);
+     .navBar {
+            &__menu {
+                ul {
+                    li {
+                        .store-link {
+                            &:after {
+                                @include transform(scale(1));
+                                opacity: 1;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    .container {
+        &--store {
+            @include padding(4em, null, 4em, null);
+            @include margin(null, null, 2em, null);
+            @media screen and (min-width: 2000px) {
+                @include margin(null, null, 32em, null);
+            }
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                @include padding(3em, null, 4em, null);
+            }
+
+        }
+    }
+    &__title {
+        margin-top: 2em;
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            display: none;
+        }
+    }
+    &__album {
+        @include size(12em, null);
+        @include margin(.8em, null, 1em, null);
+        border-radius: 5px;
+    }
+    &__buy {
+        @include padding(3em, null, null, null);
+        a {
+            display: block;
+            color: map-get($colors, white);
+            p {
+                @include margin(null, null, 1em, null);
+                display: block;
+                visibility: hidden;
+            }
+            &:hover {
+                p {
+                    visibility: visible
+                }
+            }
+            img {
+                @include size(2em, null);
+                @include margin(1.4em, auto, .6em, auto);
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.contacts {
+    color: map-get($colors, white);
+    background-color: map-get($colors, black2);
+    .navBar {
+        &__menu {
+            ul {
+                li {
+                    .contatti-link {
+                        &:after {
+                            @include transform(scale(1));
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &--contacts {
+            @include padding(4em, null, 4em, null);
+            @include margin(null, null, 2em, null);
+            @media screen and (min-width: 2000px) {
+                @include margin(null, null, 32em, null);
+            }
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                @include padding(3em, null, 4em, null);
+            }
+            a {
+                color: map-get($colors, white);
+            }
+        }
+    }
+    &__title {
+        margin-top: 2em;
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            display: none;
+        }
+    }
+    &__box {
+        @include size(50%, null);
+        @include padding(2em, 2em, 2em, 2em);
+        @include margin(2em, auto, 2em, auto);
+        background-color: map-get($colors, black4);
+        border-radius: 5px;
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            @include size(70%, null);
+        }
+        @media screen and (max-width: map-get($grid-breakpoints, sm)) {
+            @include size(90%, null);
+        }
+        &:hover {
+            @include margin(1.5em, null, null, null);
+        }
+        img {
+            @include size(2em, null);
+            @include margin(1.5em, auto, 1.5em, auto);
+        }
+    }
+}

@@ -1,0 +1,125 @@
+    .navBar {
+        @include size(100%, null);
+        @include padding(2.5em, null, 2.5em, null);
+        z-index: 9;
+        font-family: 'Oswald', sans-serif;
+        background-color: map-get($colors, black);
+        &__menu {
+            ul {
+                li {
+                    @include margin(null, 1em, null, 1em);
+                    display: inline-block;
+                    a {
+                        position: relative;
+                        font-size: 1.4em;
+                        color: map-get($colors, white);
+                        &:hover {
+                            text-decoration: none;
+                            &:after {
+                                @include transform(scale(1));
+                                opacity: 1;
+                            }
+                        }
+                        &:after {
+                            @include size(100%, 1em);
+                            @include position(absolute, null, null, -.3em, 0);
+                            @include margin(10px, null, null, null);
+                            @include transform(scale(0, 1));
+                            @include transition-transform(opacity 0.35s, -webkit-transform 0.35s);
+                            content: '';
+                            display: inline-block;
+                            border-bottom: 2px solid;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__logo {
+            img {
+                @include size(14em, null);
+                @include margin(null, null, 1.2em, null);
+            }
+        }
+        &__hamburger {
+            @include position(absolute, -.7em, 1em, null, null);
+            display: inline-block;
+            &--arrow {
+                &.active {
+                    .hamburger-inner {
+                        &:before {
+                            @include transform(translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1));
+                        }
+                        &:after {
+                            @include transform(translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1));
+                        }
+                    }
+                }
+            }
+            .hamburger-box {
+                @include size(35px, 24px);
+                display: inline-block;
+                position: relative;
+                .inner {
+                    @include size(35px, 4px);
+                    @include position(absolute, null, null, null, null);
+                    @include transition(ease 0.15s);
+                    display: block;
+                    border-radius: 4px;
+                    background-color: map-get($colors, white);
+                }
+                .hamburger-inner {
+                    @extend .inner;
+                    @include margin(-2px, null, null, null);
+                    @include position(null, 50%, null, null, null);
+                    &:before,
+                    &:after {
+                        @extend .inner;
+                        content: "";
+                    }
+                    &:before {
+                        @include position(null, -8px, null, null, null);
+                    }
+                    &:after {
+                        @include position(null, null, null, -8px, null);
+                    }
+                }
+            }
+            @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+                display: none;
+            }
+        }
+        @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+            @include padding(2.2em, null, 2.2em, null);
+            .container {
+                @include size(100%, null);
+            }
+            .bounceInDown,
+            .animated {
+                animation: none;
+            }
+            &__menu {
+                @include position(absolute, 2.2em, 0, null, 0);
+                display: none;
+                z-index: 9;
+                background-color: map-get($colors, black);
+                .col-12 {
+                    @include padding(0, 0, 0, 0);
+                }
+                ul {
+                    li {
+                        @include margin(0, 0, 0, 0);
+                        @include padding(.8em, 0, .8em, 0);
+                        display: block;
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+            &__logo {
+                img {
+                    @include size(10em, null);
+                    @include position(absolute, -1em, null, null, 1em);
+                }
+            }
+        }
+    }

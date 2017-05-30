@@ -1,0 +1,49 @@
+.video {
+    background-color: map-get($colors, black2);
+    color: map-get($colors, white);
+    .navBar {
+        &__menu {
+            ul {
+                li {
+                    .video-link {
+                        &:after {
+                            @include transform(scale(1));
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        &--video {
+            @include padding(6em, null, 4em, null);
+            @include margin(null, null, 2em, null);
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                @include padding(3em, null, 4em, null);
+            }
+        }
+    }
+    &__title {
+        margin-top: 2em;
+        @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+            display: none;
+        }
+    }
+    &__list {
+        @include margin(null, null, 4em, null);
+        color: map-get($colors, white);
+        iframe {
+            border-radius: 3px;
+        }
+        a {
+            @include margin(.8em, null, null, null);
+            color: map-get($colors, white);
+            font-size: 1.2em;
+            text-decoration: none;
+            @media screen and (max-width: map-get($grid-breakpoints, lg)) {
+                font-size: 1.4em;
+            }
+        }
+    }
+}
